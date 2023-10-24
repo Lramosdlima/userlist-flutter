@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:userlist/views/user_list.dart';
+import 'package:userlist/views/form.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: const UserList(),
+      home: const FormPage(),
     );
   }
 }
