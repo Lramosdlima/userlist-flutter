@@ -12,16 +12,15 @@ class UserTile extends StatelessWidget {
     if (user.avatarUrl == null || user.avatarUrl!.isEmpty) {
       avatar = const CircleAvatar(child: Icon(Icons.person));
     } else {
-      avatar = CircleAvatar(
-        backgroundImage: NetworkImage(user.avatarUrl.toString()),
-      );
+      avatar =
+          CircleAvatar(backgroundImage: Image.asset(user.avatarUrl!).image);
     }
     return ListTile(
       leading: avatar,
       title: Text(user.name),
       subtitle: user.email == null
           ? const Text(
-              'Sem email',
+              'Email não identificado',
               style: TextStyle(color: Colors.red),
             )
           : Text(user.email.toString()),
