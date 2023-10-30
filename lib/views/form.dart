@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:userlist/views/user_list.dart';
 
-class FormPage extends StatelessWidget {
+class FormPage extends StatefulWidget {
   const FormPage({super.key});
 
+  @override
+  State<FormPage> createState() => _FormPageState();
+}
+
+class _FormPageState extends State<FormPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,20 +21,25 @@ class FormPage extends StatelessWidget {
             children: [
               TextFormField(
                 decoration: const InputDecoration(labelText: "Nome"),
+                validator: (value) => validation(value),
               ),
               TextFormField(
                 decoration: const InputDecoration(labelText: "CPF"),
+                validator: (value) => validation(value),
               ),
               TextFormField(
                 decoration: const InputDecoration(labelText: "Email"),
+                validator: (value) => validation(value),
               ),
               TextFormField(
                 decoration: const InputDecoration(labelText: "Senha"),
+                validator: (value) => validation(value),
                 obscureText: true,
               ),
               TextFormField(
                 decoration:
                     const InputDecoration(labelText: "Confirmação de Senha"),
+                validator: (value) => validation(value),
                 obscureText: true,
               ),
               const SizedBox(height: 16),
@@ -46,4 +56,11 @@ class FormPage extends StatelessWidget {
           ),
         ));
   }
+}
+
+validation(value) {
+  if (value == null || value.isEmpty) {
+    return 'Preencha o campo';
+  }
+  return null;
 }
