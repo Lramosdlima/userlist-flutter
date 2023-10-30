@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <!-- Google Tag Manager -->
+    <!--<script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KWKH7Q');
+    </script>-->
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J2D8BWCNC6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-J2D8BWCNC6');
+    </script>
+    <base href="/" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaço Aluno | Login</title>
+    <link href="/Content/css?v=GSq--Ib1OKFIhHgR-9nRTFqaNZMfYXl7b3muuUpqdG41" rel="stylesheet"/>
+
+    <link href="/font-awesome/css?v=DWzYKC0jd6clsSeB4EkEn6OEx9vHam-xVWrDW9id9NI1" rel="stylesheet"/>
+
+    <script src="/bundles/jquery?v=6VsjCzMoOmv2HPYmvwrJYSPOhMjx3JZDy0Jgwi1RZ1A1"></script>
+
+    <script src="/bundles/jqueryval?v=liFQDLl2DYXeEfda_Lo9HxMCJUnZ2Adg-vEhq6ZMqpo1"></script>
+
+    <script src="/bundles/bootstrap?v=-ktyuuYVm8reiCqek-REkH9kFQQZ53F1Ay-TXz9RIew1"></script>
+
+    <link href="/plugins/toastrStyles?v=wv41ulRbRBPWdpHwT7UET_1zvsk5ekyMqlm1qQYP3v01" rel="stylesheet"/>
+
+    <script src="/Scripts/plugins/toastr/toastr.min.js"></script>
+
+    <link href="/Content/loader.css" rel="stylesheet"/>
+
+    <link href="/plugins/jasnyBootstrapStyles?v=O0wiM5pUk7qBUU6W6XlsblDykajR0HFOKSwppf4n5V81" rel="stylesheet"/>
+
+    <script src="/plugins/jasnyBootstrap?v=nHHyhyCH-E7Io47ZjbhezA9z45FFoXeKAFzz4ekfd5A1"></script>
+
+    <script src="/bundles/politicas?v=piUKUUQtZnowQuFeg0BUw2oSqAIOpSMgqkYmEwh6EQk1"></script>
+
+
+    <link rel="apple-touch-icon" href="/custom_icon.png">
+
+    <link rel="manifest" href="/manifest.json" />
+    <script src="/service-worker.js"></script>
+    <script type="text/javascript">
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('./service-worker.js').then(function (registration) {
+                    console.log('Service worker registered with scope: ', registration.scope);
+                }, function (err) {
+                    console.log('Service worker registration failed: ', err);
+                });
+            });
+        }
+    </script>
+</head>
+<body class="gray-bg">
+    <!-- Google Tag Manager (noscript) -->
+    <!--<noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWKH7Q"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>-->
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <div class="middle-box text-center loginscreen  animated fadeInDown container">
+        <div>
+            <h4>
+                <img alt="image" src="/Images/logoCEUB.png" style="max-width:210px;">
+            </h4>
+        </div>
+        <br />
+        
+
+<form action="/Sistema/Acesso/Login" class="m-t" method="post"><input name="__RequestVerificationToken" type="hidden" value="8M1vc8IQ_8F5_yxipHrZfkfP9Hj2YfkGLfq7Z9R-Jw4_7XkgidyvbetMfxxidkgBaPmSEVWBuWfvcNMm9CDRXc9WjYo1" />    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="fa fa-user"></i>
+            </span>
+
+            <input class="form-control" data-val="true" data-val-length="Tamanho máximo de 120 caracteres excedido." data-val-length-max="120" data-val-required="Informe seu RA ou E-mail ou CPF." id="coAcesso" maxlength="120" name="coAcesso" placeholder="RA ou E-mail ou CPF" type="text" value="" />
+
+        </div>
+        <small class="text-danger">
+            <b>
+                <span class="field-validation-valid" data-valmsg-for="coAcesso" data-valmsg-replace="true"></span>
+            </b>
+        </small>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="fa fa-lock"></i>
+            </span>
+            <input class="form-control" data-val="true" data-val-required="Informe sua senha." id="coSenha" name="coSenha" placeholder="Senha" type="password" />
+        </div>
+        <small class="text-danger">
+            <b>
+                <span class="field-validation-valid" data-valmsg-for="coSenha" data-valmsg-replace="true"></span>
+            </b>
+        </small>
+    </div>
+    <div class="form-group" id="keepConnect" style="display:none;">
+        <div class="input-group">
+            <input class="js-switch" data-val="true" data-val-required="The Mantenha-me conectado field is required." id="icManterConectado" name="icManterConectado" style="vertical-align: sub !important;" type="checkbox" value="true" /><input name="icManterConectado" type="hidden" value="false" /><span class="text-muted" style="vertical-align: middle !important;">&nbsp;Mantenha-me conectado</span>
+        </div>
+    </div>
+    <div class="form-group">
+        <input id="hdfRecaptchaToken" name="ReCaptchaToken" type="hidden" value="" />
+        <small class="text-danger">
+            <b>
+                <span class="field-validation-valid" data-valmsg-for="ReCaptchaToken" data-valmsg-replace="true"></span>
+            </b>
+        </small>
+    </div>
+    <button id="btn-login" type="button" class="btn btn-primary btn-lg block full-width m-b btn-purple" onclick="onClick()">
+        <i class="fa fa-sign-in"></i>&nbsp;Acessar
+    </button>
+    <p>
+        <a class="btn btn-default btn-sm btn-block" href="/Sistema/Acesso/PrimeiroAcesso">
+            <i class="fa fa-user-plus"></i>&nbsp;Primeiro Acesso
+        </a>
+    </p>
+    <p>
+        <a class="btn btn-default btn-sm btn-block" href="/Sistema/Acesso/RecuperarSenha">
+            <i class="fa fa-key"></i>&nbsp;Esqueci a Senha
+        </a>
+    </p>
+    <p id="pwaButton" class="d-none">
+        <a class="btn btn-default btn-sm btn-block" onclick="showInstallationButton()">
+            <i class="fa fa-download"></i>&nbsp; Instalar o App
+        </a>
+    </p>
+        <p>
+            <!-- Site Blindado -->
+            <div id="armored_website" style="margin:30px auto;">
+                <param id="aw_preload" value="true" />
+                <param id="aw_use_cdn" value="true" />
+            </div>
+        </p>
+</form>
+
+
+    </div>
+
+
+        <div id="divRecaptcha"
+             data-sitekey="6LfCdlQdAAAAAFtAy7goFTGyEOWQ420c791oKjba"
+             data-callback="onSubmit"
+             data-size="invisible"></div>
+    
+    
+    <script src="/Scripts/plugins/inputmask/jquery.inputmask.min.js"></script>
+    
+    <script src="/sistema/acesso/l?v=rJo4RpQsqHKW1DrHSyF_tJAPL6m7lFslKzBScGQZdiw1"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <script type="text/javascript">
+        login.Iniciar();
+
+        var isRecaptchaDefined = '6LfCdlQdAAAAAFtAy7goFTGyEOWQ420c791oKjba' != '' && 'True' == 'True';
+
+        var onSubmit = function (token) {
+            if (grecaptcha != undefined) {
+                $("#hdfRecaptchaToken").val(token);
+            }
+
+            $("form").submit();
+        };
+
+        var onClick = function () {
+
+            if (isRecaptchaDefined) {
+                grecaptcha.execute();
+            } else {
+                $("form").submit();
+            }
+        };
+
+        var onloadCallback = function () {
+
+            if (isRecaptchaDefined) {
+                grecaptcha.render('divRecaptcha', {
+                    'sitekey': '6LfCdlQdAAAAAFtAy7goFTGyEOWQ420c791oKjba',
+                    'callback': onSubmit
+                });
+            }
+        };
+
+        // Ao clicar no ENTER, acionar o fluxo do ReCaptcha.
+        $("form").keypress(function (event) {
+            if (event.keyCode == 13) {
+                $("#btn-login").click();
+            }
+        });
+
+        $(document).ready(function () {
+
+            var firefox = navigator.userAgent.indexOf('Firefox') != -1;
+            var chrome = navigator.userAgent.indexOf('Chrome') != -1;
+            var edge = navigator.userAgent.indexOf('Edge') != -1;
+            var safari = navigator.userAgent.indexOf('Safari') != -1;
+            var opera = navigator.userAgent.indexOf('Opera') != -1;
+
+            if (chrome || edge) {
+                // Ocultar na versão Standalone
+                if (!matchMedia('(display-mode: standalone)').matches) {
+                    $("#pwaButton").show();
+                } else {
+                    $("#pwaButton").hide();
+                }
+
+            } else {
+                $("#pwaButton").hide();
+            }
+        })
+
+    </script>
+        <!-- Site Blindado -->
+        <script type="text/javascript" src="//cdn.siteblindado.com/aw.js"></script>
+
+    <script src="/Scripts/jquery.signalR-2.2.0.min.js"></script>
+    <script src="/Scripts/html2canvas.min.js"></script>
+    <script src="/Scripts/hubs/hub.Transmissao.widget.js"></script>
+</body>
+</html>
+
