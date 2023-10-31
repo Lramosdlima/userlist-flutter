@@ -51,19 +51,20 @@ deleteUser(context, user) {
   showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-            title: Text("Excluir Usuário"),
-            content: Text("Tem certeza que deseja excluir esse usuário?"),
+            title: const Text("Excluir Usuário"),
+            content: const Text("Tem certeza que deseja excluir esse usuário?"),
             actions: [
               TextButton(
-                child: Text("Não"),
+                child: const Text("Não"),
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
               ),
               TextButton(
-                child: Text("Sim"),
+                child: const Text("SIM", style: TextStyle(color: Colors.red)),
                 onPressed: () {
                   Provider.of<Users>(context, listen: false).remove(user);
+                  Navigator.of(context).pop();
                 },
               ),
             ],
