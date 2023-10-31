@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 class UserForm extends StatelessWidget {
   final _form = GlobalKey<FormState>();
+  final Map<String, String> _formData = {};
 
   UserForm({super.key});
 
@@ -34,23 +35,17 @@ class UserForm extends StatelessWidget {
                 TextFormField(
                   decoration: const InputDecoration(labelText: 'Nome'),
                   validator: (value) => validateName(value),
-                  onSaved: (value) {
-                    print(value);
-                  },
+                  onSaved: (value) => _formData['name'] = value!,
                 ),
                 TextFormField(
                   decoration: const InputDecoration(labelText: 'E-mail'),
                   validator: (value) => validateEmail(value),
-                  onSaved: (value) {
-                    print(value);
-                  },
+                  onSaved: (value) => _formData['email'] = value!,
                 ),
                 TextFormField(
                   decoration: const InputDecoration(labelText: 'URL do Avatar'),
                   validator: (value) => validateAvatarUrl(value),
-                  onSaved: (value) {
-                    print(value);
-                  },
+                  onSaved: (value) => _formData['avatarUrl'] = value!,
                 ),
               ],
             ),
