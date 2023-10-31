@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:userlist/models/user.dart';
+import 'package:userlist/provider/user.dart';
 import 'package:userlist/routes/app_routes.dart';
 
 class UserTile extends StatelessWidget {
@@ -22,17 +24,12 @@ class UserTile extends StatelessWidget {
         child: Row(
           children: [
             IconButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(
-                  AppRoutes.USER_FORM,
-                  arguments: user,
-                );
-              },
+              onPressed: () => editUser(context, user),
               color: Theme.of(context).primaryColor,
               icon: const Icon(Icons.edit),
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () => deleteUser(context, user),
               color: Theme.of(context).primaryColor,
               icon: const Icon(Icons.delete),
             )
@@ -41,6 +38,36 @@ class UserTile extends StatelessWidget {
       ),
     );
   }
+}
+
+editUser(context, user) {
+  Navigator.of(context).pushNamed(
+    AppRoutes.USER_FORM,
+    arguments: user,
+  );
+}
+
+deleteUser(context, user) {
+  showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+            title: Text("Excluir Usuário"),
+            content: Text("Tem certeza que deseja excluir esse usuário?"),
+            actions: [
+              TextButton(
+                child: Text("Não"),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+              TextButton(
+                child: Text("Sim"),
+                onPressed: () {
+                  Provider.of<Users>(context, listen: false).remove(user);
+                },
+              ),
+            ],
+          ));
 }
 
 avatarImage(avatarUrl) {
