@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:userlist/views/form.dart';
+import 'package:userlist/routes/app_routes.dart';
+import 'package:userlist/views/user_form.dart';
+import 'package:userlist/views/user_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +14,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Projeto Terrível',
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-      ),
-      home: const FormPage(),
-    );
+        title: 'Projeto Terrível',
+        theme: ThemeData(
+          primarySwatch: Colors.deepPurple,
+        ),
+        routes: {
+          AppRoutes.HOME: (_) => const UserList(),
+          AppRoutes.USER_FORM: (_) => UserForm(),
+        });
   }
 }
