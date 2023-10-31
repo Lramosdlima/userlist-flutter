@@ -37,7 +37,7 @@ const DUMMY_USERS = {
   '8': User(
       id: '8',
       name: 'Cachorro de Bem',
-      email: 'bom@professor.com',
+      email: 'bom@dog.com',
       avatarUrl:
           'https://st2.depositphotos.com/3378121/5455/i/450/depositphotos_54555903-stock-photo-smiling-chihuahua.jpg'),
   '9': User(

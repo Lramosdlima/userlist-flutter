@@ -57,28 +57,35 @@ class UserForm extends StatelessWidget {
           padding: const EdgeInsets.all(15),
           child: Form(
             key: _form,
-            child: Column(
-              children: [
-                profileImage(_formData['avatarUrl']),
-                TextFormField(
-                  initialValue: _formData['name'],
-                  decoration: const InputDecoration(labelText: 'Nome'),
-                  validator: (value) => validateName(value),
-                  onSaved: (value) => _formData['name'] = value!,
-                ),
-                TextFormField(
-                  initialValue: _formData['email'],
-                  decoration: const InputDecoration(labelText: 'E-mail'),
-                  validator: (value) => validateEmail(value),
-                  onSaved: (value) => _formData['email'] = value!,
-                ),
-                TextFormField(
-                  initialValue: _formData['avatarUrl'],
-                  decoration: const InputDecoration(labelText: 'URL do Avatar'),
-                  validator: (value) => validateAvatarUrl(value),
-                  onSaved: (value) => _formData['avatarUrl'] = value!,
-                ),
-              ],
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  profileImage(_formData['avatarUrl']),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+                  TextFormField(
+                    initialValue: _formData['name'],
+                    decoration: const InputDecoration(labelText: 'Nome'),
+                    validator: (value) => validateName(value),
+                    onSaved: (value) => _formData['name'] = value!,
+                  ),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+                  TextFormField(
+                    initialValue: _formData['email'],
+                    decoration: const InputDecoration(labelText: 'E-mail'),
+                    validator: (value) => validateEmail(value),
+                    onSaved: (value) => _formData['email'] = value!,
+                  ),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+                  TextFormField(
+                    initialValue: _formData['avatarUrl'],
+                    decoration:
+                        const InputDecoration(labelText: 'URL do Avatar'),
+                    validator: (value) => validateAvatarUrl(value),
+                    onSaved: (value) => _formData['avatarUrl'] = value!,
+                  ),
+                ],
+              ),
             ),
           ),
         ));
@@ -92,7 +99,7 @@ profileImage(avatarUrl) {
 
   if (avatarUrl.startsWith('assets')) {
     return CircleAvatar(
-      radius: 85,
+      radius: 83,
       backgroundColor: Colors.deepPurple,
       child: CircleAvatar(
         radius: 80,
@@ -103,7 +110,7 @@ profileImage(avatarUrl) {
 
   if (avatarUrl.startsWith('http')) {
     return CircleAvatar(
-      radius: 85,
+      radius: 83,
       backgroundColor: Colors.deepPurple,
       child: CircleAvatar(
         radius: 80,

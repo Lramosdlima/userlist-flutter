@@ -75,9 +75,15 @@ avatarImage(avatarUrl) {
   if (avatarUrl == null || avatarUrl!.isEmpty) {
     return const CircleAvatar(child: Icon(Icons.person));
   } else if (avatarUrl.startsWith('http')) {
-    return CircleAvatar(backgroundImage: NetworkImage(avatarUrl));
+    return CircleAvatar(
+        radius: 21,
+        backgroundColor: Colors.deepPurple,
+        child: CircleAvatar(backgroundImage: NetworkImage(avatarUrl)));
   } else {
-    return CircleAvatar(backgroundImage: Image.asset(avatarUrl!).image);
+    return CircleAvatar(
+        radius: 21,
+        backgroundColor: Colors.deepPurple,
+        child: CircleAvatar(backgroundImage: Image.asset(avatarUrl!).image));
   }
 }
 
