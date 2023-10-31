@@ -8,4 +8,8 @@ class Users with ChangeNotifier {
   List<User> get all {
     return [..._items.values];
   }
+
+  int get count {
+    return _items.length;
+  }
 }
