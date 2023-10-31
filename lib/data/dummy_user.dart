@@ -2,12 +2,12 @@ import 'package:userlist/models/user.dart';
 
 // ignore: constant_identifier_names
 const DUMMY_USERS = {
-  '2': User(
+  '1': User(
       id: '1',
       name: 'Fernando Guimaraes',
       email: 'fernando@professor.com',
       avatarUrl: 'assets/img/fernando.png'),
-  '1': User(
+  '2': User(
       id: '2',
       name: 'Eloisa Masson',
       email: 'eloisa@professor.com',
