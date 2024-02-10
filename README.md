@@ -1,4 +1,12 @@
-# 👥 User List 
+<h1 align="center">
+    <a href="#" alt="User List"> 👥 Lista de Usuários </a>
+</h1>
+
+<p align="center">
+  Feito por Leonardo Ramos
+</p>
+
+# 🤔 Sobre o Projeto
 
 Esse é um projeto simples de CRUD feito em Flutter. 👤
 
