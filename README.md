@@ -1,16 +1,34 @@
-# userlist
+<h1 align="center">
+    <a href="#" alt="User List"> 👥 Lista de Usuários </a>
+</h1>
 
-A new Flutter project.
+<p align="center">
+  Feito por Leonardo Ramos
+</p>
 
-## Getting Started
+# 🤔 Sobre o Projeto
 
-This project is a starting point for a Flutter application.
+Esse é um projeto simples de CRUD feito em Flutter. 👤
 
-A few resources to get you started if this is your first Flutter project:
+A ideia desse projeto é fazer a demonstração de uma lista de usuários que é possível adicionar um novo ou alterar algum utilizando a passagem de parâmetros de uma tela para outra com a utilização do `ChangeNotifier`,  atualizando um registro na aplicação.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🧅 Camadas
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 📁 Components
+Componentização de itens como o `user_tile`, um item da lista.
+
+### 📁 Data
+Aqui tem alguns dados mockados, que seriam disponibilizados por alguma API.
+
+### 📁 Models
+Aqui a modelagem da data do usuário que será manipulada no decorrer do uso da aplicação.
+
+### 📁 Provider
+Aqui são as ações (CRUD) que serão aplicadas nos dados da lista de usuário.
+
+### 📁 Routes
+Uma classe com todas as rotas de páginas da aplicação.
+
+### 📁 Views
+A montagem das páginas propriamente dita.
+
